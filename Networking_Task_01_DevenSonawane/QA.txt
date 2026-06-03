@@ -1,0 +1,54 @@
+Q1) What is an IP Address?
+Ans: 1)IP Address stands for Internet Protocol Address.
+    2)It is a unique numerical address assigned to a device on a network, it allows devices to communicate and exchange data with each other.
+    3)There are 2 types of IP Address:
+	1. IPv4 - its length is 32 bits. It is represented by four decimal numbers ranges from 0-255 seprated by dots(.).
+	  ex. 192.168.0.0
+	2. IPv6 - its length is 128 bits. It is represented by hexadecimal numbers separated by colon(:).
+	  ex. 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+
+
+Q2) What is a MAC Address?
+Ans: 1)MAC stands for Media Access Control Address.
+     2)It is a unique hardware identifier assigned to a network interface card(NIC) by the manufacturer.
+     3)It is 48 bits long, represented by hexadecimal numbers and separated by dash or hyphen(-).
+     4)ex. 00:1A:2B:3C:4D:5E
+
+
+Q3) What is a Default Gateway?
+Ans: 1) A default Gateway is a networking device that acts as the exit point from a local network.(typically a router)
+     2) It acts as an exit door for local traffic, directing your device's requests to outside or the internet.
+     3) The default gateway is the IP address of your router.
+
+
+
+Q4) What is DNS?
+Ans: 1)DNS stands for Domain Name System. It is a system that converts domain name into IP addresses.
+     2)human remember: google.com
+       computer understand: 142.250.183.14
+       this kind of translation is done by DNS.
+     3) DNS is important because without DNS we need to remember IP address of every website which is very difficult for a human to remember.
+
+
+Q5) Difference between Public IP and Private IP.
+Ans: 
+
+Public IP Address
+
+1) An IP address that is accessible over the Internet and uniquely identifies a device/network globally is called as public IP address.
+2) It is assigned by Internet Service Provider(ISP) and it is globally unique.
+3) Public IP addresses are directly accessible/reachable from the internet. 
+4) Ex. 8.8.8.8 , 49.36.120.15
+5) Public IP addresses are visible to external networks.
+6) It uses WAN communication (Wide Area Network).
+7) public IP addresses are used by Web servers, cloud services, Internet-facing devices.
+
+Private IP Addresses
+
+1) An IP address used within a local network (LAN) and not directly accessible from the Internet.
+2) It is assigned by Router, DHCP server or network administrator.
+3) Public IP addresses cannot be directly reached from the internet.
+4) Ex. 192.168.1.10, 10.0.0.5
+5) Private IP addresses visible only within the local network.
+6) It uses LAN Communication (Local Area Network).
+7) private IP addresses are used by PCs, laptops, printers, IoT devices inside LAN.
