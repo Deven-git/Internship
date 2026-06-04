@@ -1,0 +1,65 @@
+1. ipconfig /all
+
+output:
+
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : DESKTOP-R54DROC
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Ethernet 5:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VirtualBox Host-Only Ethernet Adapter
+   Physical Address. . . . . . . . . : 0A-00-27-00-00-04
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::1e05:fcc8:7fd6:9483%4(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 822738983
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2E-7F-48-3B-BC-EC-A0-15-F4-49
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+
+2. nslookup google.com
+
+output:
+
+Server:  UnKnown
+Address:  192.168.1.1
+
+Non-authoritative answer:
+Name:    google.com
+Addresses:  2404:6800:4000:1006::64
+          2404:6800:4000:1006::71
+          2404:6800:4000:1006::8a
+          2404:6800:4000:1006::8b
+          192.178.193.102
+          192.178.193.138
+          192.178.193.113
+          192.178.193.101
+          192.178.193.100
+          192.178.193.139
+
+
+3. ping google.com
+
+output:
+
+
+Pinging google.com [142.250.134.101] with 32 bytes of data:
+Reply from 142.250.134.101: bytes=32 time=5ms TTL=114
+Reply from 142.250.134.101: bytes=32 time=5ms TTL=114
+Reply from 142.250.134.101: bytes=32 time=5ms TTL=114
+Reply from 142.250.134.101: bytes=32 time=4ms TTL=114
+
+Ping statistics for 142.250.134.101:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 4ms, Maximum = 5ms, Average = 4ms
