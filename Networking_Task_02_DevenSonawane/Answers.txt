@@ -1,0 +1,194 @@
+Networking Task 02: Network Devices & IP
+Addressing
+
+Part A: Network Devices Research
+
+Questions 
+
+1. Router
+
+A router is a networking device that forwards data packets between different computer networks. It connects multiple packet-switched networks or subnetworks, managing traffic by directing packets to their intended IP addresses. Routers allow multiple devices to share an Internet connection efficiently.
+
+How It Works
+A router receives data packets from devices on a network.
+It examines the destination IP address of each packet.
+Using its routing table, it determines the best path for the packet.
+The router forwards the packet to the appropriate network.
+It also performs Network Address Translation (NAT), allowing multiple devices to share a single public IP address.
+
+Real-World Usage
+Home Wi-Fi routers connect laptops, smartphones, and smart TVs to the Internet.
+Offices use routers to connect internal networks with external networks.
+Internet Service Providers (ISPs) use high-performance routers to route traffic across the Internet.
+
+Example
+
+When you browse a website from your laptop, the router sends your request to the Internet and returns the website data back to your device.
+
+
+2.Switch
+
+The Switch is a network device that is used to segment the networks into different subnetworks called subnets or LAN segments. It is responsible for filtering and forwarding the packets between LAN segments based on MAC address. 
+
+How It Works
+Each device connected to a switch has a unique MAC (Media Access Control) address.
+The switch learns and stores MAC addresses in its MAC address table.
+When data arrives, the switch checks the destination MAC address.
+It sends the data only to the intended device instead of broadcasting it to all devices.
+
+Real-World Usage
+Offices connect computers, printers, and servers through switches.
+Schools and colleges use switches to connect laboratory computers.
+Data centers use switches to interconnect thousands of servers.
+
+
+Example
+
+In a computer lab with 50 computers, a switch ensures that a file sent from one computer reaches only the intended destination computer.
+
+
+3.Hub
+
+Hub in networking plays a vital role in data transmission and broadcasting. A hub is a hardware device used at the physical layer to connect multiple devices in the network. Hubs are widely used to connect LANs. A hub has multiple ports. Unlike a switch, a hub cannot filter the data, i.e. it cannot identify the destination of the packet, So it broadcasts or sends the message to each port.
+
+How It Works
+A hub receives data from one device.
+It broadcasts the data to every connected device.
+All devices receive the data, but only the intended device processes it.
+Unlike switches, hubs do not understand MAC addresses.
+
+Real-World Usage
+Previously used in small networks.
+Mostly replaced by switches due to better efficiency.
+
+Example
+
+If Computer A sends data to Computer B through a hub, all computers connected to the hub receive the data, even though only Computer B uses it.
+
+4.Access Point
+
+A Wireless Access Point (WAP) is a networking device that allows connecting the devices with the wired network. A Wireless Access Point (WAP) is used to create the WLAN (Wireless Local Area Network), it is commonly used in large offices and buildings which have expanded businesses.
+It is easier and simpler to understand and implant the device. It can be fixed, mobile or hybrid proliferated in the 21st century. The availability, confidentiality, and integrity of the communication and network are a responsibility and to be ensured about that.
+
+How It Works
+The access point connects to a wired network using an Ethernet cable.
+It broadcasts wireless signals.
+Wireless devices such as smartphones and laptops connect to the access point.
+Data from wireless devices is forwarded to the wired network and vice versa.
+
+Real-World Usage
+Offices use access points to provide Wi-Fi throughout buildings.
+Universities install multiple access points to cover large campuses.
+Shopping malls and airports provide public Wi-Fi through access points.
+
+Example
+
+When you connect your smartphone to office Wi-Fi, the access point receives and forwards your data to the company network.
+
+5.Firewall
+
+A Firewall is a network security system, available as hardware or software, that monitors and controls incoming and outgoing traffic based on predefined rules. It acts like a security guard, filtering data packets to either:
+Accept: Allow the traffic.
+Reject: Block with an error response.
+Drop: Block silently without response.
+
+How It Works
+Examines network traffic entering or leaving the network.
+Compares traffic against security policies.
+Allows safe traffic and blocks suspicious or unauthorized traffic.
+Protects systems from hackers, malware, and cyberattacks.
+
+Real-World Usage
+Businesses use firewalls to protect corporate networks.
+Home routers often include built-in firewalls.
+Banks and government organizations use advanced firewalls for security.
+
+Example
+A firewall can block unauthorized users from accessing a company's internal servers through the Internet.
+
+6.Modem
+
+Modem stands for Modulator/Demodulator. The modem is defined as a networking device that is used to connect devices connected in the network to the internet. The main function of a modem is to convert the analog signals that come from telephone wire into a digital form. In digital form, these converted signals are stored in the form of 0s and 1s.
+
+How It Works
+Converts digital signals from computers into analog signals for transmission over communication lines.
+Converts incoming analog signals back into digital signals.
+Acts as the bridge between the ISP and the local network.
+
+Real-World Usage
+Every home broadband connection uses a modem.
+Businesses use modems to connect their networks to the Internet.
+Fiber-optic Internet connections use Optical Network Terminals (ONTs), which function similarly to modems.
+
+Example
+When you subscribe to broadband Internet, the modem receives Internet signals from the ISP and passes them to your router, which then distributes the connection to all your devices.
+
+
+Part B: IP Address Classification
+
+Questions
+
+1. 192.168.1.10 - This is a private IP Address as it falls within the range 192.168.0.0 - 192.168.255.255
+
+2. 10.0.0.5 - This is a private IP Address as it falls within the range 10.0.0.0 - 10.255.255.255
+
+3. 172.16.5.20 - This is a private IP Address as it falls within the range 172.16.0.0 - 172.31.255.255
+
+4. 8.8.8.8 - This is a public IP Address as it does not belong to any private range i.e. it is publicly routable.
+
+5. 1.1.1.1 -  This is a public IP address as it does not belong to any private range, it is publicly routable.
+
+6. 192.168.100.1 -  This is a private IP Address as it falls within the range 192.168.0.0 - 192.168.255.255 
+
+ 
+Part C: Understanding Your Network
+
+Questions
+
+Q1. Which IP range does your device belong to?
+Ans: My device belongs to 192.168.0.0 - 192.168.255.255 range.
+
+Q2. Is it Public or Private?
+Ans: It is a Private IP Address.
+
+Q3. What role does your router play in your network?
+Ans: The router acts as the gateway between my local network and the Internet. It assigns IP addresses, routes data packets, performs Network Address Translation (NAT), and enables devices on the network to communicate with external networks.
+
+Q4. What would happen if the DNS server stopped working?
+Ans:	1.The browser cannot translate domain name.
+	2.Websites cannot be accessed using domain names.
+	3.Users would need to enter IP addresses manually which is a difficult task.
+	4.Other internet services may fail to locate servers.
+
+
+Part E: Practical Command Exercise
+
+Questions
+
+Q1. What IP address did DNS return for Google?
+Ans: The DNS server returned the following IP addresses for google.com:
+
+IPv4 Addresses:
+
+192.178.193.102
+192.178.193.138
+192.178.193.113
+192.178.193.101
+192.178.193.100
+192.178.193.139
+
+IPv6 Addresses:
+
+2404:6800:4000:1006::64
+2404:6800:4000:1006::71
+2404:6800:4000:1006::8a
+2404:6800:4000:1006::8b
+
+Q2. Was the ping successful?
+Ans: Yes.
+
+Q3. Why is DNS important before communication begins?
+Ans: DNS (Domain Name System) is important because it converts a website's name into an IP address that computers can understand. Before communication begins DNS server finds the correct IP address of the website.
+
+
+
