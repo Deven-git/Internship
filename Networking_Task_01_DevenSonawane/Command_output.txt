@@ -16,7 +16,11 @@ Ethernet adapter Ethernet 5:
 
    Connection-specific DNS Suffix  . :
    Description . . . . . . . . . . . : VirtualBox Host-Only Ethernet Adapter
+<<<<<<< HEAD
    Physical Address. . . . . . . . . : 0A-00-27-00-00-07
+=======
+   Physical Address. . . . . . . . . : 0A-00-27-00-00-89
+>>>>>>> fcf72089d23073613cb517c6b7adc8f09b5a9bd0
    DHCP Enabled. . . . . . . . . . . : No
    Autoconfiguration Enabled . . . . : Yes
    Link-local IPv6 Address . . . . . : fe80::1e05:fcc8:7fd6:9483%2(Preferred)
@@ -41,7 +45,7 @@ Windows IP Configuration
 Ethernet adapter Ethernet 5:
 
    Connection-specific DNS Suffix  . :
-   Link-local IPv6 Address . . . . . : fe80::1e05:fcc8:7fd6:9483%4
+   Link-local IPv6 Address . . . . . : fe80::1e05:fcc8:7fd6:9483%7
    IPv4 Address. . . . . . . . . . . : 192.168.56.1
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
    Default Gateway . . . . . . . . . :

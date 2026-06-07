@@ -11,7 +11,7 @@
 | --------------- | ------------------------------------------ |
 | Hostname        | DESKTOP-R54DROC                            |
 | IPv4 Address    | 192.168.56.1                               |
-| MAC Address     | 0A-00-27-00-00-04                          |
+| MAC Address     | 0A-00-27-00-00-07                          |
 | Default Gateway | Not Available                              |
 | DNS Server      | 192.168.1.1 (Shown as Unknown in nslookup) |
 
