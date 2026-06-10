@@ -1,0 +1,50 @@
+1. What is Linux?
+Ans: Linux is a free and open-source operating system kernel created by Linus Torvalds in 1991. An operating system manages computer hardware and software resources and provides services for computer programs. Because Linux is open source, users can view, modify, and distribute its source code.
+
+2. Why is Linux important in Cyber Security?
+Ans: Linux plays a crucial role in cyber security because:
+
+Open Source: Security professionals can inspect and audit the source code.
+Powerful Command Line: Enables efficient system administration and security testing.
+Stability: Linux systems are reliable and less prone to crashes.
+Security Features: Includes strong permission management and access controls.
+Networking Tools: Provides advanced networking and monitoring capabilities.
+Security Distributions: Specialized distributions such as Kali Linux come preloaded with penetration testing tools.
+
+Many servers, cloud platforms, and security appliances run Linux, making it essential for cybersecurity professionals.
+
+3. Difference between Linux and Windows.
+Ans: 
+Feature	Linux	Windows
+Cost	Free and Open Source	Commercial and Licensed
+Source Code	Available to everyone	Proprietary
+Security	Generally more secure and customizable	More frequently targeted by malware
+User Interface	Command Line and GUI available	Primarily GUI-based
+Performance	Efficient on low-end hardware	Requires more system resources
+Software Installation	Package managers (APT, YUM, etc.)	Executable installers (.exe, .msi)
+Customization	Highly customizable	Limited customization
+Usage	Servers, Security, Development	Personal and Business Computing
+
+4. What is a Linux Distribution?
+Ans: A Linux Distribution (Distro) is a complete operating system built around the Linux kernel along with system utilities, software packages, and graphical interfaces.
+
+Examples of popular Linux distributions include:
+
+Ubuntu
+Debian
+Fedora
+Kali Linux
+Linux Mint
+
+Different distributions are designed for different purposes such as desktop use, servers, software development, or cybersecurity.
+
+5. Why do Ethical Hackers prefer Linux-based operating systems?
+Ans: Ethical hackers prefer Linux because:
+
+Pre-installed Security Tools
+Powerful Terminal
+Open Source Environment
+Better Networking Support
+Automation
+Stability and Performance
+Industry Standard

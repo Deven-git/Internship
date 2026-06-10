@@ -1,0 +1,106 @@
+Part B: Basic Navigation Commands
+
+1. pwd
+/home/kali/CyberSecurity_Lab/Linux
+                                       
+2. ls
+└─$ ls
+CyberSecurity  EthicalHacking  Linux  Networking  notes.txt  Reports  report.txt
+
+3. ls -la
+
+─$ ls -la
+total 28
+drwxrwxr-x  7 kali kali 4096 Jun 10 08:23 .
+drwx------ 21 kali kali 4096 Jun 10 08:12 ..
+drwxrwxr-x  2 kali kali 4096 Jun 10 08:22 CyberSecurity
+drwxrwxr-x  2 kali kali 4096 Jun 10 08:08 EthicalHacking
+drwxrwxr-x  2 kali kali 4096 Jun 10 08:25 Linux
+drwxrwxr-x  2 kali kali 4096 Jun 10 08:07 Networking
+-rw-rw-r--  1 kali kali    0 Jun 10 08:12 notes.txt
+drwxrwxr-x  2 kali kali 4096 Jun 10 08:08 Reports
+-rw-rw-r--  1 kali kali    0 Jun 10 08:12 report.txt
+
+4. cd
+─$ cd Linux
+
+5. clear
+---
+6. history
+
+
+      
+7. whoami
+└─$ whoami
+kali
+
+8. hostname
+$ hostname
+kali
+
+
+Part C: Directory Management
+
+
+1. mkdir
+mkdir CyberSecurity_Lab
+
+2. cd
+ ─$ cd Linux
+
+3. tree
+
+┌──(kali㉿kali)-[~/CyberSecurity_Lab]
+└─$ tree
+.
+├── CyberSecurity
+│   └── report.txt
+├── EthicalHacking
+├── Linux
+├── Networking
+├── notes.txt
+├── Reports
+└── report.txt
+
+4. Create Files
+touch notes.txt
+touch commands.txt
+
+5. Copy Files
+cp report.txt CyberSecurity
+
+6. Move Files
+mv command.txt Linux/
+
+7.Rename Files
+mv command.txt command_linux.txt
+
+8. Delete Files
+rm command.txt
+
+
+Part E: System Information Collection
+
+1. uname -a
+$ uname -a      
+Linux kali 6.12.25-amd64 #1 SMP PREEMPT_DYNAMIC Kali 6.12.25-1kali1 (2025-04-30) x86_64 GNU/Linux
+
+2. hostname
+─$ hostname
+kali
+
+3. whoami
+$ whoami  
+kali
+
+4. date
+$ date
+Wed Jun 10 08:30:41 AM EDT 2026
+
+5. uptime
+$ uptime  
+ 08:30:44 up 41 min,  1 user,  load average: 0.24, 0.07, 0.02
+
+6. pwd
+$ pwd
+/home/kali/CyberSecurity_Lab/Linux
