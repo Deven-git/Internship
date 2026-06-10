@@ -3,9 +3,9 @@
 ## Part A: Linux Installation & Verification
 
 Linux was successfully installed and verified using various Linux commands.
-![alt text](1.png)
-![alt text](2.png)
-![alt text](3.png)
+![alt text](Linux_Task_01_DevenSonawane/Screenshots/1.png)
+![alt text](Linux_Task_01_DevenSonawane/Screenshots/2.png)
+![alt text](Linux_Task_01_DevenSonawane/Screenshots/3.png)
 
 ---
 
