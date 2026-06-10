@@ -3,9 +3,15 @@
 ## Part A: Linux Installation & Verification
 
 Linux was successfully installed and verified using various Linux commands.
+<<<<<<< HEAD
 ![alt text](Linux_Task_01_DevenSonawane/Screenshots/1.png)
 ![alt text](Linux_Task_01_DevenSonawane/Screenshots/2.png)
 ![alt text](Linux_Task_01_DevenSonawane/Screenshots/3.png)
+=======
+![alt text](Screenshots/1.png)
+![alt text](Screenshots/2.png)
+![alt text](Screenshots/3.png)
+>>>>>>> 4c32db1 (update)
 
 ---
 
@@ -39,9 +45,9 @@ It prints the username associated with the current effective user ID. It tells y
 
 ### 8. hostname
 It is a built-in networking utility used to view or temporarily change a computer's network identification name.
-![alt text](4.png)
-![alt text](5.png)
-![alt text](6.png)
+![alt text](Screenshots/4.png)
+![alt text](Screenshots/5.png)
+![alt text](Screenshots/6.png)
 
 ---
 
@@ -49,7 +55,7 @@ It is a built-in networking utility used to view or temporarily change a compute
 
 ### Create Directory
 
-![alt text](7.png)
+![alt text](Screenshots/7.png)
 
 ```bash
 mkdir CyberSecurity_Lab
@@ -141,7 +147,7 @@ It is used to delete files and directories from the system.
 
 **5. System Uptime:** 08:30:44 up 41 min, 1 user, load average: 0.24, 0.07, 0.02
 
-![alt text](8.png)
+![alt text](Screenshots/8.png)
 ---
 
 ## Part F: Linux Research Activity
