@@ -1,0 +1,50 @@
+1. password_backup.txt
+
+Permission: 600
+
+Rights
+
+Owner - Read, Write
+Group - No Access
+Others - No Access
+
+Reason:
+Password backups may contain confidential credentials. Allowing other users to read them could lead to unauthorized access and security breaches.
+
+2. public_notice.txt
+
+Permission: 644
+
+Rights
+
+Owner - Read, Write
+Group - Read
+Others - Read
+
+Reason:
+A public notice is meant to be viewed by everyone, but only the owner or administrator should be able to modify it.
+
+3. system_log.txt
+
+Permission: 640
+
+Rights
+Owner - Read, Write
+Group - Read
+Others - No Access
+
+Reason:
+System logs can contain security events, login information, and error messages. Administrators may need group access for monitoring, but ordinary users should not view them.
+
+4. personal_notes.txt
+
+Permission: 600
+
+Rights
+
+Owner - Read, Write
+Group - No Access
+Others - No Access
+
+Reason:
+Personal notes are private documents and should only be accessible by their owner.

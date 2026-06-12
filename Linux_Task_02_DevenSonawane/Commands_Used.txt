@@ -1,0 +1,120 @@
+Part A: Understanding Users
+
+1. whoami
+$ whoami
+kali
+
+2. id
+$ id         
+uid=1000(kali) gid=1000(kali) groups=1000(kali),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),101(netdev),103(scanner),107(bluetooth),125(lpadmin),133(wireshark),135(kaboxer)
+
+3. cat /etc/passwd
+$ cat /etc/passwd              
+root:x:0:0:root:/root:/usr/bin/zsh
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+systemd-timesync:x:992:992:systemd Time Synchronization:/:/usr/sbin/nologin
+messagebus:x:991:991:System Message Bus:/nonexistent:/usr/sbin/nologin
+tss:x:101:104:TPM software stack:/var/lib/tpm:/bin/false
+
+
+
+Part B: Create Users & Groups
+
+
+Create:
+
+Groups
+
+$ sudo groupadd interns 
+$ sudo groupadd cyberteam
+
+Users
+
+$ sudo useradd -m student1
+$ sudo useradd -m student2
+$ sudo useradd -m student3
+
+Add users to groups
+
+$ sudo usermod -aG interns student1
+$ sudo usermod -aG interns student2
+$ sudo usermod -aG cyberteam student3
+$ sudo usermod -aG cyberteam student1
+
+Verify using
+
+$ groups
+kali adm dialout cdrom floppy sudo audio dip video plugdev users netdev scanner bluetooth lpadmin wireshark kaboxer
+
+$ id student1
+uid=1001(student1) gid=1003(student1) groups=1003(student1),1001(interns),1002(cyberteam)
+                                                                                                                                                                                                                                            
+$ id student2
+uid=1002(student2) gid=1004(student2) groups=1004(student2),1001(interns)
+                                                                                                                                                                                                                                            $ id student3
+uid=1003(student3) gid=1005(student3) groups=1005(student3),1002(cyberteam)
+
+
+Create a folder:
+CyberSecurity_Project
+
+$ mkdir CyberSecurity_Project
+
+Inside create:
+
+report.txt
+notes.txt
+credentials.txt
+
+$ cd CyberSecurity_Project
+
+$ touch report.txt                                                                                                                                                                                                                                        
+$ touch notes.txt                                                                                                                                                                                                                                         
+$ touch credentials.txt
+
+Check ownership using:
+
+ls -l
+
+Change ownership:
+
+$ sudo chown student2 credentials.txt
+
+
+
+Part D: File Permissions
+
+Create a file:
+security_policy.txt
+
+touch security_policy.txt
+
+Perform:
+
+Read Only(r--r--r--)
+$ chmod 444 security_policy.txt 
+
+Read & Write(rw-rw-r--)
+$ chmod 664  security_policy.txt
+
+Full Access(rwxrwxrwx)
+$ chmod 777 security_policy.txt 
+

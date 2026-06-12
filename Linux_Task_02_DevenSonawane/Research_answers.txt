@@ -1,0 +1,18 @@
+1. Why are file permissions important?
+Ans: File permission are important because they control who can read, write and execute files and directories in a Linux system. They help us to protect sensitive information or data from unauthorized access and prevents changes to important files.
+
+2. What happens if sensitive files are given 777 permissions?
+Ans: Permission 777 gives full access to a file or directory. means anyone can do changes like anyone can read, write and execute that file.
+
+3. What is the principle of Least Privilege?
+Ans: The Principle of Least Privilege (PoLP) is a security concept that states users, programs, and processes should be given only the minimum permissions required to perform their tasks.
+
+4. Why do organizations restrict user access?
+Ans: Organizations restrict user access to protect their systems, data, and resources from unauthorized use.
+because of reasons like: 
+
+-Protecting confidential information.
+-Preventing accidental modification or deletion of files.
+-Reducing the impact of malware and cyberattacks.
+-Ensuring compliance with security policies and regulations.
+-Maintaining system stability and integrity.

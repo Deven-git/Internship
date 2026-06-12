@@ -1,0 +1,7 @@
+| Permission | Symbolic  | Owner Rights         | Group Rights  | Others Rights | Use Case                  |
+| ---------- | --------- | -------------------- | ------------- | ------------- | ------------------------- |
+| 755        | rwxr-xr-x | Read, Write, Execute | Read, Execute | Read, Execute | Scripts, web applications |
+| 644        | rw-r--r-- | Read, Write          | Read          | Read          | Documents, config files   |
+| 777        | rwxrwxrwx | Full Access          | Full Access   | Full Access   | Temporary shared files    |
+| 600        | rw------- | Read, Write          | No Access     | No Access     | Passwords, private keys   |
+| 700        | rwx------ | Read, Write, Execute | No Access     | No Access     | Private scripts, folders  |
