@@ -1,0 +1,181 @@
+Part B: Process Management
+
+1. ps aux | grep sleep
+$ ps aux | grep sleep
+kali       84934  0.0  0.0   5580  2020 pts/0    S+   08:33   0:00 sleep 300
+kali       85065  0.0  0.0   6528  2236 pts/1    S+   08:34   0:00 grep --color=auto sleep
+
+2. kill PID
+$ kill 84934   
+
+3. kill -9 PID
+$ kill -9 84934
+
+
+Part C: System Monitoring
+
+Run the following commands:
+
+1. free -h 
+$ free -h                  
+               total        used        free      shared  buff/cache   available
+Mem:           4.4Gi       1.0Gi       2.8Gi        22Mi       913Mi       3.4Gi
+Swap:          953Mi          0B       953Mi
+
+
+2. df -h
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            2.2G     0  2.2G   0% /dev
+tmpfs           449M  1.3M  448M   1% /run
+/dev/sda1        79G   34G   41G  46% /
+tmpfs           2.2G  4.0K  2.2G   1% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           2.2G  8.0K  2.2G   1% /tmp
+tmpfs           1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           449M  128K  449M   1% /run/user/1000
+
+
+3. uptime
+$ uptime
+ 08:39:03 up  2:54,  1 user,  load average: 0.12, 0.10, 0.03
+
+4. uname -a
+$ uname -a
+Linux kali 6.12.25-amd64 #1 SMP PREEMPT_DYNAMIC Kali 6.12.25-1kali1 (2025-04-30) x86_64 GNU/Linux
+
+
+Part D: Service Monitoring
+
+1. systemctl status ssh
+
+$ systemctl status ssh               
+○ ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: disabled)
+     Active: inactive (dead)
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+
+2. systemctl status NetworkManager
+
+$ systemctl status NetworkManager
+● NetworkManager.service - Network Manager
+     Loaded: loaded (/usr/lib/systemd/system/NetworkManager.service; enabled; preset: enabled)
+     Active: active (running) since Fri 2026-06-12 05:44:33 EDT; 3h 7min ago
+ Invocation: 6f81fb664ece4a3e9712ced445d08a2b
+       Docs: man:NetworkManager(8)
+   Main PID: 770 (NetworkManager)
+      Tasks: 4 (limit: 5222)
+     Memory: 10.4M (peak: 11.1M)
+        CPU: 523ms
+     CGroup: /system.slice/NetworkManager.service
+             └─770 /usr/sbin/NetworkManager --no-daemon
+
+Jun 12 06:29:32 kali NetworkManager[770]: <info>  [1781260172.8721] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+Jun 12 06:44:32 kali NetworkManager[770]: <info>  [1781261072.8736] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+Jun 12 06:59:32 kali NetworkManager[770]: <info>  [1781261972.8806] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+Jun 12 07:14:32 kali NetworkManager[770]: <info>  [1781262872.8792] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+Jun 12 07:29:32 kali NetworkManager[770]: <info>  [1781263772.8768] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+Jun 12 07:44:32 kali NetworkManager[770]: <info>  [1781264672.8804] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+Jun 12 07:59:32 kali NetworkManager[770]: <info>  [1781265572.8774] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+Jun 12 08:14:32 kali NetworkManager[770]: <info>  [1781266472.8921] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+Jun 12 08:29:32 kali NetworkManager[770]: <info>  [1781267372.8819] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+Jun 12 08:44:32 kali NetworkManager[770]: <info>  [1781268272.8776] dhcp4 (eth0): state changed new lease, address=192.168.247.130
+
+
+Part F: Security Monitoring Challenge
+
+1. netstat
+
+Proto Recv-Q Send-Q Local Address Foreign Address State  PID/Program Name 
+tcp    0      0      0.0.0.0:22      0.0.0.0:*    LISTEN 712/sshd 
+tcp    0      0      127.0.0.1:631   0.0.0.0:*    LISTEN 567/cupsd 
+udp    0      0      0.0.0.0:68      0.0.0.0:*           501/dhclient
+
+
+2. ss
+$ ss                 
+Netid                State                 Recv-Q                Send-Q                                                                        Local Address:Port                                        Peer Address:Port                 
+u_str                ESTAB                 0                     0                                                                                         * 11647                                                  * 898                  
+u_str                ESTAB                 0                     0                                                                                         * 16417                                                  * 15434                
+u_str                ESTAB                 0                     1536                                                            /run/dbus/system_bus_socket 11563                                                  * 8806                 
+u_str                ESTAB                 0                     0                                                               /run/systemd/journal/stdout 9534                                                   * 2874                 
+u_str                ESTAB                 0                     0                                                                                         * 10212                                                  * 10963                
+u_str                ESTAB                 0                     0                                                                                         * 11639                                                  * 13368                
+u_dgr                ESTAB                 0                     0                                                                                         * 2699                                                   * 2700                 
+u_str                ESTAB                 0                     0                                                                                         * 9037                                                   * 11099                
+u_str                ESTAB                 0                     0                                                                                         * 13457                                                  * 14362                
+u_str                ESTAB                 0                     0                                                                        /run/user/1000/bus 900                                                    * 899                  
+u_str                ESTAB                 0                     0                                                                                         * 13378                                                  * 10970                
+u_str                ESTAB                 0                     0                                                               /run/systemd/journal/stdout 10558                                                  * 5781                 
+u_str                ESTAB                 0                     0                                                               /run/systemd/journal/stdout 11086                                                  * 14450                
+u_str                ESTAB                 0                     0                                                                        /run/user/1000/bus 11105                                                  * 1013                 
+u_str                ESTAB                 0                     0                                                                                         * 12370                                                  * 6897                 
+u_str                ESTAB                 0                     0                                                                                         * 11684                                                  * 7131                 
+u_str                ESTAB                 0                     0                                                                                         * 888                                                    * 10960                
+u_str                ESTAB                 0                     0                                                                                         * 16421                                                  * 13536                
+u_str                ESTAB                 0                     0                                                                                         * 9035                                                   * 14455                
+u_str                ESTAB                 0                     0                                                               /run/user/1000/pulse/native 13389                                                  * 10225                
+u_str                ESTAB                 0                     0                                                               /run/systemd/journal/stdout 11556                                                  * 12361                
+u_str                ESTAB                 0                     0                                                                                         * 8816                                                   * 12383                
+u_str                ESTAB                 0                     0                                                                        /run/user/1000/bus 34994                                                  * 32112                
+u_str                ESTAB                 0                     0                                                                        /run/user/1000/bus 13536                                                  * 16421                
+u_dgr                ESTAB                 0                     0                                                                                         * 2700                                                   * 2699                 
+u_str                ESTAB                 0                     0                                                               /run/dbus/system_bus_socket 7061                                                   * 11679                
+u_str                ESTAB                 0                     0                                                               /run/user/1000/at-spi/bus_0 13325                                                  * 863                  
+u_str                ESTAB                 0                     0                                                               /run/dbus/system_bus_socket 11036                                                  * 14381                
+u_str                ESTAB                 0                     0                                                                        @/tmp/.X11-unix/X0 12427                                                  * 8851                 
+u_str                ESTAB                 0                     0                                                                                         * 12491                                                  * 8902                 
+u_str                ESTAB                 0                     0                                                                        /run/user/1000/bus 14452                                                  * 13480                
+u_str                ESTAB                 0                     0                                                                                         * 11568                                                  * 11569                
+u_str                ESTAB                 0                     0                                                         /run/user/1000/pipewire-0-manager 6114                                                   * 6113                 
+
+
+3. who
+$ who   
+kali     seat0        2026-06-13 00:56 (:0)
+
+
+4. w
+$ w  
+ 01:32:21 up 36 min,  1 user,  load average: 0.02, 0.02, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+kali              -                00:56           0.00s  0.01s lightdm --session-child 13 24
+
+5. last
+
+$ last
+kali     tty7         :0               Sat Jun 13 00:56 - still logged in
+lightdm  tty7         :0               Sat Jun 13 00:56 - 00:56  (00:00)
+kali     tty7         :0               Fri Jun 12 05:45 - 09:21  (03:36)
+lightdm  tty7         :0               Fri Jun 12 05:44 - 05:45  (00:00)
+kali     tty7         :0               Wed Jun 10 07:49 - 09:03  (01:14)
+lightdm  tty7         :0               Wed Jun 10 07:49 - 07:49  (00:00)
+kali     tty7         :0               Tue Jun  2 10:10 - 16:14  (06:03)
+lightdm  tty7         :0               Tue Jun  2 10:08 - 10:10  (00:01)
+kali     tty7         :0               Wed Apr  8 13:09 - 13:38  (00:28)
+lightdm  tty7         :0               Wed Apr  8 13:09 - 13:09  (00:00)
+kali     tty7         :0               Fri Mar 13 01:15 - still logged in
+lightdm  tty7         :0               Fri Mar 13 01:15 - 01:15  (00:00)
+kali     tty7         :0               Tue Jan 27 08:37 - 09:33  (00:55)
+lightdm  tty7         :0               Tue Jan 27 08:37 - 08:37  (00:00)
+kali     tty7         :0               Sat Jan 24 08:12 - still logged in
+lightdm  tty7         :0               Sat Jan 24 08:12 - 08:12  (00:00)
+kali     tty7         :0               Sat Jan 24 00:36 - 01:54  (01:17)
+lightdm  tty7         :0               Sat Jan 24 00:36 - 00:36  (00:00)
+kali     tty7         :0               Thu Jan 22 10:14 - 10:30  (00:15)
+lightdm  tty7         :0               Thu Jan 22 10:14 - 10:14  (00:00)
+kali     tty7         :0               Thu Jan 22 02:13 - still logged in
+lightdm  tty7         :0               Thu Jan 22 02:13 - 02:13  (00:00)
+kali     tty7         :0               Thu Jan 22 01:53 - still logged in
+lightdm  tty7         :0               Thu Jan 22 01:53 - 01:53  (00:00)
+kali     tty7         :0               Thu Jan 22 01:21 - still logged in
+lightdm  tty7         :0               Thu Jan 22 01:21 - 01:21  (00:00)
+kali     tty7         :0               Wed Jan 21 08:02 - still logged in
+lightdm  tty7         :0               Wed Jan 21 08:02 - 08:02  (00:00)
+root     pts/1                         Wed Jan 21 02:59 - 03:10  (00:11)
+kali     tty7         :0               Wed Jan 21 00:18 - still logged in
+
+
+

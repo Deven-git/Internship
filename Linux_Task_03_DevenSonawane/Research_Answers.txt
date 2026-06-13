@@ -1,0 +1,124 @@
+Part G: Mini SOC Activity
+
+1. How would you identify resource-heavy processes?
+Ans: 
+The first step is to check the system's resource usage. I would use commands such as:
+
+top
+
+or
+
+ps aux --sort=-%cpu
+
+to identify processes consuming the most CPU resources.
+
+To identify processes using excessive memory, I would use:
+
+ps aux --sort=-%mem
+
+I would also use:
+
+free -h
+
+to check overall memory usage and:
+
+uptime
+
+to view system load averages.
+By analyzing these outputs, I can determine which process is responsible for high CPU, memory, or system load and investigate it further.
+
+
+2. How would you determine whether a process is suspicious?
+Ans:
+Finding a resource-heavy process does not automatically mean it is malicious. I would gather additional information before making a judgment.
+First, I would check the process details:
+
+ps -p PID -f
+
+This helps identify the process name, owner, and parent process.
+Next, I would verify whether the process belongs to a legitimate application or system service. Processes with unusual names, random character strings, or unknown origins may require further investigation.
+I would also inspect network activity using:
+
+ss -tulnp
+
+or
+
+netstat -tulnp
+
+to determine whether the process is communicating with external systems.
+Additionally, I would check which users are logged in:
+
+who
+
+and
+
+w
+
+to identify whether an authorized user started the process.
+
+Signs that may indicate a suspicious process include:
+Extremely high CPU or memory usage without a clear reason.
+Unknown process names.
+Unexpected network connections.
+Processes running from unusual directories.
+Unauthorized user activity.
+Unexpected services listening on network ports.
+
+
+3. What information would you collect before terminating a process?
+Ans:
+Before terminating any process, I would collect as much information as possible because killing the wrong process could disrupt important services or affect system stability.
+The information I would record includes:
+
+Process Information:
+Process Name
+Process ID (PID)
+User running the process
+Parent Process ID (PPID)
+CPU usage
+Memory usage
+
+Commands:
+ps aux | grep PID
+
+or
+
+ps -fp PID
+
+Network Information:
+Active network connections
+Open ports
+Remote IP addresses
+
+Commands:
+ss -tulnp
+
+or
+
+netstat -tulnp
+
+User Activity:
+Logged-in users
+Current user sessions
+
+Commands:
+who
+w
+
+System Status:
+Memory utilization
+System load
+Disk usage
+
+Commands:
+free -h
+uptime
+df -h
+
+After collecting this information and confirming that the process is unnecessary, malicious, or causing system issues, I would terminate it using:
+
+kill PID
+
+If the process does not stop normally, I would use:
+
+kill -9 PID

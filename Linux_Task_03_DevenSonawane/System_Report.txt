@@ -1,0 +1,78 @@
+Overall System Assessment Report
+
+Date: 13 June 2026
+System: Kali Linux
+User: kali
+
+Executive Summary
+
+A comprehensive assessment of the Kali Linux system was conducted covering process monitoring, process management, system monitoring, service monitoring, shell scripting, security monitoring, and basic SOC analysis. The objective was to evaluate system health, identify potential security concerns, and understand administrative monitoring techniques.
+
+System Health Analysis
+The system is running Kali Linux 6.12.25-amd64 on a 64-bit architecture.
+Total installed memory is 4.4 GiB, with 3.4 GiB available, indicating healthy memory utilization.
+Swap memory of 953 MiB is configured and currently unused.
+The primary filesystem (/dev/sda1) has 79 GB total capacity, with 34 GB used and 41 GB available, resulting in 46% disk utilization.
+System uptime was recorded at 2 hours and 54 minutes, with a load average of 0.12, 0.10, and 0.03, indicating very low system load and stable performance.
+Process Monitoring Findings
+Process monitoring was performed using ps, ps aux, top, and htop.
+The highest resource-consuming process observed had:
+PID: 1094
+CPU Usage: 3.7%
+Memory Usage: 3.4%
+No unusually high resource consumption was detected during the assessment.
+Process Management Findings
+A test process (sleep 300) was successfully created and identified using:
+ps aux | grep sleep
+The process was terminated successfully using:
+kill PID
+
+and
+
+kill -9 PID
+This demonstrated effective process identification and termination procedures.
+Service Monitoring Findings
+
+Critical services such as:
+
+SSH Service
+NetworkManager
+
+were reviewed using systemctl status.
+
+Services play a critical role in maintaining system functionality, networking, and user access. Any service failure could result in system instability, network disruption, or application downtime.
+
+Security Monitoring Findings
+
+Security monitoring was performed using:
+
+netstat
+ss
+who
+w
+last
+
+These tools provided visibility into:
+
+Active network connections
+Listening ports
+Logged-in users
+User activities
+Historical login records
+
+No evidence of unauthorized users, suspicious network activity, or unusual login patterns was identified during the assessment.
+
+SOC Analysis
+
+As part of the SOC investigation exercise:
+
+Resource-heavy processes were identified using CPU and memory monitoring tools.
+Suspicious processes were evaluated by reviewing:
+Process details
+Parent-child relationships
+User ownership
+Network connections
+Before terminating any process, critical information such as PID, PPID, resource utilization, active connections, and user sessions would be collected to preserve evidence and avoid disrupting legitimate services.
+Conclusion
+
+The system is operating normally with healthy resource utilization, stable service availability, and no obvious indicators of compromise. Monitoring and administrative commands successfully demonstrated process analysis, service management, network monitoring, and basic incident response procedures. The assessment confirms that the system is stable, secure, and functioning within expected operational parameters.
